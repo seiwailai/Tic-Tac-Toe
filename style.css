@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(68, 183, 139);
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+    background: rgb(31, 44, 58);
+    padding: 1rem 0;
+}
+
+.scoreboard {
+    border: 2px solid black;
+    width: 10rem;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1.5rem auto;
+    position: relative;
+}
+
+.playerlabel {
+    width: 4.5rem;
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+    background: rgb(223, 77, 80);
+    padding: 0.5rem;
+    position: absolute;
+    margin-top: -2.5rem;
+}
+
+#player1label {
+    margin-left: -50%;
+}
+
+#player2label {
+    margin-left: 80%;
+}
+
+.game-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 10rem);
+    grid-template-rows: repeat(3, 10rem);
+    justify-content: center;
+}
+
+.grid-item {
+    border: 2px solid rgb(31, 44, 58);
+    text-align: center;
+    font-size: 8rem;
+    color: white;
+    cursor: pointer;
+}
+
+.score {
+    font-size: 2.5rem;
+}
+
+.top {
+    border-top: none;
+}
+
+.bottom {
+    border-bottom: none;
+}
+
+.left {
+    border-left: none;
+}
+
+.right {
+    border-right: none;
+}
+
+.grid {
+    height: 10rem;
+    width: 10rem;
+}
+
+.game-moderator {
+    background: rgb(31, 44, 58);
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    margin: 1rem;
+    margin-top: 2rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.x {
+    height: 10rem;
+    width: 1rem;
+    background: transparent;
+    margin: auto;
+    border: none;
+    transform: translateX(-8px);
+}
+
+.x::before, .x::after {
+    border: inherit;
+    margin: inherit;
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: rgb(223, 77, 80);
+}
+
+.x::before {
+    transform: rotate(45deg);
+}
+
+.x::after {
+    transform: rotate(-45deg);
+}
+
+.o {
+    border: none;
+    height: 9rem;
+    width: 9rem;
+    background: black;
+    border-radius: 50%;
+    margin: auto;
+    transform: translateY(5px);
+}
+
+.o::before {
+    border: inherit;
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: rgb(68, 183, 139);
+    transform: scale(0.8) translate(-89px, 0);
+}

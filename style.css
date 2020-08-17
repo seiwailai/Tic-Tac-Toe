@@ -42,6 +42,7 @@ h1 {
 
 #player2label {
     margin-left: 80%;
+    background: black;
 }
 
 .game-grid-container {
@@ -147,7 +148,7 @@ h1 {
     position: relative;
     height: 42rem;
     width: 0.5rem;
-    background: black;
+    background: white;
     transform: rotate(45deg) translateX(-15rem) translateY(-7rem);
     z-index: 1;
 }
@@ -156,7 +157,7 @@ h1 {
     position: relative;
     height: 42rem;
     width: 0.5rem;
-    background: black;
+    background: white;
     transform: rotate(-45deg) translateX(21.7rem) translateY(-1rem);
     z-index: 1;
 }
@@ -165,8 +166,9 @@ h1 {
     position: relative;
     height: 30rem;
     width: 0.5rem;
-    background: black;
-    transform: translateX(4.7rem) translateY(-10rem);
+    background: white;
+    margin: auto;
+    transform: translateY(-10rem);
     z-index: 1;
 }
 
@@ -174,7 +176,8 @@ h1 {
     position: relative;
     height: 30rem;
     width: 0.5rem;
-    background: black;
-    transform: rotate(-90deg) translateX(20rem) translateY(15rem);
+    background: white;
+    margin: auto;
+    transform: rotate(-90deg) translateX(19.1rem) translateY(10rem);
     z-index: 1;
 }

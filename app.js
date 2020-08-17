@@ -9,9 +9,31 @@ let win = false
 let line_type;
 
 
+function xo_enter_hover() {
+    if (player1_turn) {
+        this.classList.add('x')
+    }
+    else {
+        this.classList.add('o')
+    }
+}
+
+
+function xo_leave_hover() {
+    if (player1_turn) {
+        this.classList.remove('x')
+    }
+    else {
+        this.classList.remove('o')
+    }
+}
+
+
 function xo_onclick_event_listener() {
     for (i=0; i<grid.length; i++) {
         grid[i].addEventListener("click", render_choice, false)
+        grid[i].addEventListener("mouseenter", xo_enter_hover, false)
+        grid[i].addEventListener("mouseleave", xo_leave_hover, false)
     }
 }
 
@@ -35,6 +57,8 @@ function render_choice() {
         player1_turn = true
     }
     this.removeEventListener("click", render_choice)
+    this.removeEventListener("mouseenter", xo_enter_hover)
+    this.removeEventListener("mouseleave", xo_leave_hover)
 }
 
 
@@ -76,6 +100,8 @@ function check_winner(row, col, player_sign) {
     if (win) {
         for (i=0; i<grid.length; i++) {
             grid[i].removeEventListener("click", render_choice)
+            grid[i].removeEventListener("mouseenter", xo_enter_hover)
+            grid[i].removeEventListener("mouseleave", xo_leave_hover)
         }
         if (player1_turn) {
             player1_score.innerHTML = parseInt(player1_score.innerHTML) + 1

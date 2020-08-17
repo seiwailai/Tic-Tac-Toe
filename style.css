@@ -142,3 +142,39 @@ h1 {
     background: rgb(68, 183, 139);
     transform: scale(0.8) translate(-89px, 0);
 }
+
+.slash-line {
+    position: relative;
+    height: 42rem;
+    width: 0.5rem;
+    background: black;
+    transform: rotate(45deg) translateX(-15rem) translateY(-7rem);
+    z-index: 1;
+}
+
+.backslash-line {
+    position: relative;
+    height: 42rem;
+    width: 0.5rem;
+    background: black;
+    transform: rotate(-45deg) translateX(21.7rem) translateY(-1rem);
+    z-index: 1;
+}
+
+.straight-line {
+    position: relative;
+    height: 30rem;
+    width: 0.5rem;
+    background: black;
+    transform: translateX(4.7rem) translateY(-10rem);
+    z-index: 1;
+}
+
+.horizontal-line {
+    position: relative;
+    height: 30rem;
+    width: 0.5rem;
+    background: black;
+    transform: rotate(-90deg) translateX(20rem) translateY(15rem);
+    z-index: 1;
+}
